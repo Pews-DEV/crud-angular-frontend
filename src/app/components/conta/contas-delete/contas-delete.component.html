@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-title>Alterar Conta</mat-card-title>
+
+  <form>
+    <div class="input-descricao">
+      <mat-form-field>
+        <input matInput placeholder="Descricao" [(ngModel)]="conta.descricao" name="name" disabled>
+      </mat-form-field>
+    </div>
+    <div class="input-detalhes">
+      <mat-form-field>
+        <input matInput placeholder="Valor (R$)" [(ngModel)]="conta.valor" name="price" type="number" disabled>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Vencimento" [(ngModel)]="conta.vencimento" name="vencimento" disabled>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <button mat-raised-button (click)="deleteConta()" color="warn">
+    Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+
+</mat-card>
